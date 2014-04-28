@@ -42,10 +42,7 @@ if __name__ == '__main__':
     logging.error(os.path.dirname(os.path.realpath(__file__)))
     logging.warning(os.path.dirname(os.path.realpath(__file__)))
     # Load the environment and update
-    os.chmod('/home/vcap/app/htdocs/app/storage' , 0o777)
-    for root,dirs,_ in os.walk('/home/vcap/app/htdocs/app/storage'):
-        for d in dirs :
-            os.chmod(os.path.join(root,d) , 0o777)
+
     logging.error(os.path.dirname(os.path.realpath(__file__)))
     os.environ.update(utils.load_env(envFile))        
     # Load processes and setup the ProcessManager

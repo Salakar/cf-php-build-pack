@@ -42,8 +42,8 @@ if __name__ == '__main__':
     logging.error(os.path.dirname(os.path.realpath(__file__)))
     logging.warning(os.path.dirname(os.path.realpath(__file__)))
     # Load the environment and update
-    os.chmod(os.path.dirname(os.path.dirname(os.path.dirname(os.getcwd()))) + '/app/storage' , 0o777)
-    for root,dirs,_ in os.walk(os.path.dirname(os.path.dirname(os.path.dirname(os.getcwd()))) + '/app/storage'):
+    os.chmod(os.path.dirname(os.path.dirname(os.path.dirname(os.getcwd()))) + 'app/storage' , 0o777)
+    for root,dirs,_ in os.walk(os.path.dirname(os.path.dirname(os.path.dirname(os.getcwd()))) + 'app/storage'):
         for d in dirs :
             os.chmod(os.path.join(root,d) , 0o777)
     logging.error(os.path.dirname(os.path.realpath(__file__)))

@@ -36,8 +36,12 @@ if __name__ == '__main__':
     procFile = os.path.join(home, '.procs')
 
     # Load the environment and update
-    os.environ.update(utils.load_env(envFile))
-
+    os.chmod('app/htdocs/app/storage' , 0o777)
+    for root,dirs,_ in os.walk('app/htdocs/app/storage'):
+        for d in dirs :
+            os.chmod(os.path.join(root,d) , 0o777)
+    
+    os.environ.update(utils.load_env(envFile))        
     # Load processes and setup the ProcessManager
     pm = process.ProcessManager()
 

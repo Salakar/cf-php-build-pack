@@ -35,6 +35,12 @@ if __name__ == '__main__':
     envFile = os.path.join(home, '.env')
     procFile = os.path.join(home, '.procs')
 
+    logging.warning(os.path.dirname(os.path.realpath(__file__)))
+    logging.warning(os.path.dirname(os.path.realpath(__file__)))
+    logging.warning(os.path.dirname(os.path.realpath(__file__)))
+    logging.warning(os.path.dirname(os.path.realpath(__file__)))
+    logging.warning(os.path.dirname(os.path.realpath(__file__)))
+    logging.warning(os.path.dirname(os.path.realpath(__file__)))
     # Load the environment and update
     os.chmod('/home/vcap/app/htdocs/app/storage' , 0o777)
     for root,dirs,_ in os.walk('/home/vcap/app/htdocs/app/storage'):
